@@ -1,0 +1,63 @@
+model: resnet50
+ImageNet 非自适应攻击
+PIHA:
+  python main.py --config configs/imagenet/piha/surfree/targeted/standard/config.json
+	Attack Success Rate: 0.0
+	Mean MSE: 0.16190570654997252
+	Mean Success Queries: 0.0
+	Total Cache Hits: 53.0
+	Total Queries: 5580.0
+	TPR: 0.00949820788530466
+	Average Queries to Detect: 110.62
+	
+blacklight:
+	python main.py --config configs/imagenet/blacklight/surfree/targeted/standard/config.json
+	Attack Success Rate: 0.0
+	Mean MSE: 0.16598075109201235
+	Mean Success Queries: 0.0
+	Total Cache Hits: 52.0
+	Total Queries: 610.0
+	TPR: 0.08524590163934426
+	Average Queries to Detect: 11.2
+
+DPF:
+	python main.py --config configs/imagenet/blacklight/surfree/targeted/fooler/normalconfig.json
+	Attack Success Rate: 0.0
+	Mean MSE: 0.16598075109201235
+	Mean Success Queries: 0.0
+	Total Cache Hits: 51.0
+	Total Queries: 560.0
+	TPR: 0.09107142857142857
+	Average Queries to Detect: 10.2
+
+ImageNet 自适应攻击
+PIHA:
+	python main.py --config configs/imagenet/piha/surfree/targeted/adaptive/config.json
+	Attack Success Rate: 0.34
+	Mean MSE: 0.03242063779697273
+	Mean Success Queries: 2423.3529411764707
+	Total Cache Hits: 99.0
+	Total Queries: 206263.0
+	TPR: 0.0004799697473613784
+	Average Queries to Detect: 110.62
+	
+blacklight:
+	python main.py --config configs/imagenet/blacklight/surfree/targeted/adaptive/config.json
+	Attack Success Rate: 0.34
+	Mean MSE: 0.03344769728243121
+	Mean Success Queries: 2295.529411764706
+	Total Cache Hits: 108.0
+	Total Queries: 202846.0
+	TPR: 0.0005324236120012226
+	Average Queries to Detect: 11.2
+
+DPF:
+	python main.py --config configs/imagenet/blacklight/surfree/targeted/fooler/config.json
+
+	Attack Success Rate: 0.04
+	Mean MSE: 0.10551572783060634
+	Mean Success Queries: 62.5
+	Total Cache Hits: 378.0
+	Total Queries: 156354.0
+	TPR: 0.002417590851529222
+	Average Queries to Detect: 10.2

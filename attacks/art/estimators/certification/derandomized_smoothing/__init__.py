@@ -1,0 +1,6 @@
+"""
+DeRandomized smoothing estimators.
+"""
+from attacks.art.estimators.certification.derandomized_smoothing.derandomized_smoothing import DeRandomizedSmoothingMixin
+from attacks.art.estimators.certification.derandomized_smoothing.pytorch import PyTorchDeRandomizedSmoothing
+from attacks.art.estimators.certification.derandomized_smoothing.tensorflow import TensorFlowV2DeRandomizedSmoothing

@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python main.py --config configs/imagenet/blacklight/hsja/targeted/adaptive/config.json --bright

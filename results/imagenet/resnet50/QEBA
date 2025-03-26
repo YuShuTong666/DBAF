@@ -1,0 +1,63 @@
+model: resnet50 
+ImageNet 非自适应攻击 
+PIHA:
+    python main.py --config configs/imagenet/piha/hsja/targeted/standard/config.json --method QEBA
+    Attack Success Rate: 0.0
+    Mean MSE: 0.16598075109201235
+    Mean Success Queries: 0.0
+    Total Cache Hits: 53.0
+    Total Queries: 562.0
+    TPR: 0.09430604982206406
+    Average Queries to Detect: 10.24
+
+blacklight:
+    python main.py --config configs/imagenet/blacklight/hsja/targeted/standard/config.json --method QEBA
+    Attack Success Rate: 0.0
+    Mean MSE: 0.16598075109201235
+    Mean Success Queries: 0.0
+    Total Cache Hits: 52.0
+    Total Queries: 573.0
+    TPR: 0.09075043630017451
+    Average Queries to Detect: 10.46
+
+DPF:
+    python main.py --config configs/imagenet/blacklight/hsja/targeted/fooler/normalconfig.json --method QEBA
+    Attack Success Rate: 0.0
+    Mean MSE: 0.16598075109201235
+    Mean Success Queries: 0.0
+    Total Cache Hits: 51.0
+    Total Queries: 524.0
+    TPR: 0.09732824427480916
+    Average Queries to Detect: 9.48
+
+ImageNet 自适应攻击
+PIHA:
+    python main.py --config configs/imagenet/piha/hsja/targeted/adaptive/config.json --method QEBA
+    Attack Success Rate: 0.3
+    Mean MSE: 0.03224084496785955
+    Mean Success Queries: 1981.2
+    Total Cache Hits: 813.0
+    Total Queries: 211972.0
+    TPR: 0.0038354122242560337
+    Average Queries to Detect: 10.24
+
+blacklight:
+    python main.py --config configs/imagenet/blacklight/hsja/targeted/adaptive/config.json --method QEBA
+    Attack Success Rate: 0.3
+    Mean MSE: 0.017438923391035276
+    Mean Success Queries: 2438.0
+    Total Cache Hits: 11838.0
+    Total Queries: 218407.0
+    TPR: 0.05420155947382639
+    Average Queries to Detect: 10.46
+DPF:
+    python main.py --config configs/imagenet/blacklight/hsja/targeted/fooler/config.json --method QEBA
+
+    Attack Success Rate: 0.12
+    Mean MSE: 0.04697673467267715
+    Mean Success Queries: 2660.0
+    Total Cache Hits: 241146.0
+    Total Queries: 297710.0
+    TPR: 0.8100030230761479
+    Average Queries to Detect: 9.48
+    

@@ -1,0 +1,425 @@
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='GP', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='GP', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 3943 / 5665
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 4638 / 6796
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 5696 / 7057
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 6777 / 7629
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='HSJA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='HSJA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 1957 / 5167
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 1773 / 5365
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 5216 / 5918
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 4530 / 4978
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 4997 / 5921
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 6603 / 7691
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='GP', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 50, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': True, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 1 / 157
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 1 / 9
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 1 / 9
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 1 / 9
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 1 / 9
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 1 / 9
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 1 / 6
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 2 / 7
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 1 / 6
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 1 / 7
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 1 / 6
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 1 / 11
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 1 / 8
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 1 / 8
+INFO:root:FINISHED
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 6152 / 6758
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 3292 / 5155
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, normal=False, theta_min=1.7e-05)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 2544 / 4266
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 5168 / 6910
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 5321 / 6415
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 6901 / 7417
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 6765 / 7271
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 3468 / 3932
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 5767 / 6394
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 2183 / 5775
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 5450 / 6094
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 4414 / 6885
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 7813 / 8599
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 8072 / 9686
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 4152 / 5129
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 4812 / 6032
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 4371 / 5263
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 7160 / 8237
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 7 / 320
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 5964 / 6583
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 5594 / 6495
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 7029 / 7831
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 6943 / 7750
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 2627 / 5478
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 5339 / 5980
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 3683 / 5493
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 3275 / 5098
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 8496 / 10685
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 4435 / 6283
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 2825 / 3138
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 6287 / 6623
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 3783 / 5308
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 37 / 350
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 5131 / 6232
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 1979 / 5138
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 5397 / 5863
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 4641 / 5286
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 8138 / 9749
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 3914 / 5133
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 6015 / 6824
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 651 / 1250
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 2967 / 5124
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 3297 / 5490
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 6705 / 7320
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 545 / 3377
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 6085 / 6503
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 3649 / 5167
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 8379 / 8852
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 5946 / 6539
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 3696 / 4156
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 5164 / 7016
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 4618 / 5480
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 4752 / 5393
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 5884 / 8237
+INFO:root:FINISHED
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='GP', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='blackfooler', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 3943 / 5665
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 4638 / 6796
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 5696 / 7057
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 6777 / 7629
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 1957 / 5167
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 1773 / 5365
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 5216 / 5918
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 4530 / 4978
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 4997 / 5921
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 6603 / 7691
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 6152 / 6758
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 3292 / 5155
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 5168 / 6910
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 6901 / 7417
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 5767 / 6394
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 5450 / 6094
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 7813 / 8599
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 4812 / 6032
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 7160 / 8237
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 7 / 320
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 7029 / 7831
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 2627 / 5478
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 3683 / 5493
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 3275 / 5098
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 4435 / 6283
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 2825 / 3138
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 6287 / 6623
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 3783 / 5308
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 37 / 350
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 5131 / 6232
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 1979 / 5138
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 5397 / 5863
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 4641 / 5286
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 8138 / 9749
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 3914 / 5133
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 6015 / 6824
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 651 / 1250
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 2967 / 5124
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 3297 / 5490
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 6705 / 7320
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 545 / 3377
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 6085 / 6503
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 3649 / 5167
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 8379 / 8852
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 5946 / 6539
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 3696 / 4156
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 5164 / 7016
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 4618 / 5480
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 4752 / 5393
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 5884 / 8237
+INFO:root:FINISHED
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='HSJA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 1397 / 2867
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 6823 / 7861
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 6765 / 7271
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 3468 / 3932
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 4184 / 5381
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 3883 / 5744
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 7125 / 7673
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 5590 / 6451
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 4376 / 5267
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 5879 / 7066
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 8225 / 9016
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 7784 / 8823
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 3580 / 4045
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 2256 / 5113
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 5424 / 6081
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 7433 / 7932
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 5328 / 5735
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 3609 / 5769
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 3440 / 5293
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 36 / 351
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 7737 / 9033
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 5081 / 5743
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 3527 / 3993
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 5536 / 6880
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 4605 / 5496
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 6769 / 7573
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 3832 / 4125
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 6784 / 7903
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 29 / 343
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 2867 / 5349
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 1915 / 5429
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 7625 / 8663
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 2213 / 5404
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 4634 / 5100
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 7292 / 8050
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 7240 / 8286
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 96 / 1130
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 5845 / 6174
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 7266 / 8597
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 5615 / 6028
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 4054 / 5201
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 3326 / 3638
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 3367 / 5200
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 6539 / 6912
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 5974 / 6657
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 7562 / 8275
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 5960 / 7691
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 2851 / 3169
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 7443 / 7928
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 957 / 6069
+INFO:root:FINISHED
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='HSJA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='QEBA', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:Namespace(lr=0.0002, seed=123, weight_decay=0.0005, hidden=2, n_img=50, dropout=0.1, epochs=500, k=5000, celeba=False, maxq=5000, method='GP', layers=16, alpha=0.0, T=0.0002, delta=0.8, model='resnet', r=3, iteration=8, init=100, bf=False, time=False, ntime=False, disable_logging=False, num_images=50, start_idx=0, log_dir=None, bright=False, adap_c=False, eps=0.1, nosalt=False, random_init=False, no_hash=False, accurate=False, theta_min=1.7e-05, config='configs/imagenet/blacklight/hsja/targeted/fooler/config.json', data='imagenet', defense='DPF', attack='dbagp', untargeted=False, normal=False)
+INFO:root:{'threshold': 0.8, 'add_cache_hit': True, 'reset_cache_on_hit': False, 'aggregation': 'closest', 'action': 'rejection', 'precision': None, 'state': {'type': 'blackfooler', 'window_size': 50, 'num_hashes_keep': 50, 'round': 50, 'step_size': 25, 'step_size_accurate': 20, 'num_processes': 5, 'input_shape': [3, 224, 224], 'salt': True}, 'architecture': 'resnet152', 'dataset': 'imagenet'}
+INFO:root:{'attack': 'HSJA', 'targeted': True, 'max_iter': 99999999, 'eps': 0.005, 'num_dirs': 100, 'max_num_dirs': 10000, 'budget': 100000, 'adaptive': {'query_blinding_transform': None, 'bs_boundary_end_on_hit': False, 'grad_max_attempts': 20, 'bs_grad_var': True, 'bs_grad_var_steps': 10, 'bs_grad_var_sample_size': 20, 'bs_grad_var_hit_rate': 0.05, 'bs_grad_var_upper': 5, 'bs_grad_var_lower': 1.5, 'grad_est_accept_partial': True, 'step_max_attempts': 5}}
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 1397 / 2867
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 882 / 2628
+INFO:root:True Label : 254 | Predicted Label : 255 | Cache Hits / Total Queries : 6498 / 8337
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 3790 / 5089
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 6823 / 7861
+INFO:root:True Label : 543 | Predicted Label : 286 | Cache Hits / Total Queries : 6300 / 9662
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 3549 / 7110
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 6765 / 7271
+INFO:root:True Label : 866 | Predicted Label : 111 | Cache Hits / Total Queries : 2862 / 3176
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 3468 / 3932
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 4575 / 6148
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 4184 / 5381
+INFO:root:True Label : 147 | Predicted Label : 815 | Cache Hits / Total Queries : 7759 / 8269
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 3883 / 5744
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 4312 / 5494
+INFO:root:True Label : 420 | Predicted Label : 389 | Cache Hits / Total Queries : 6608 / 7959
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 5321 / 6031
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 7125 / 7673
+INFO:root:True Label : 519 | Predicted Label : 249 | Cache Hits / Total Queries : 5438 / 8211
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 4656 / 5553
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 5590 / 6451
+INFO:root:True Label : 302 | Predicted Label : 490 | Cache Hits / Total Queries : 4140 / 5126
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 5961 / 6791
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 4376 / 5267
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 5741 / 7083
+INFO:root:True Label : 16 | Predicted Label : 953 | Cache Hits / Total Queries : 6755 / 7105
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 5879 / 7066
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 6288 / 7138
+INFO:root:True Label : 545 | Predicted Label : 889 | Cache Hits / Total Queries : 6621 / 7164
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 8225 / 9016
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 6312 / 6879
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 7784 / 8823
+INFO:root:True Label : 437 | Predicted Label : 172 | Cache Hits / Total Queries : 7722 / 9375
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 7922 / 8397
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 3580 / 4045
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 2256 / 5113
+INFO:root:True Label : 954 | Predicted Label : 709 | Cache Hits / Total Queries : 6189 / 6793
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 7220 / 7942
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 5424 / 6081
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 3078 / 5181
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 4575 / 5518
+INFO:root:True Label : 384 | Predicted Label : 929 | Cache Hits / Total Queries : 8793 / 10384
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 7433 / 7932
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 5492 / 6154
+INFO:root:True Label : 689 | Predicted Label : 812 | Cache Hits / Total Queries : 4470 / 5218
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 5328 / 5735
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 2001 / 2207
+INFO:root:True Label : 591 | Predicted Label : 224 | Cache Hits / Total Queries : 3384 / 5127
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 3609 / 5769
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 6384 / 7457
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 3440 / 5293
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 36 / 351
+INFO:root:True Label : 768 | Predicted Label : 346 | Cache Hits / Total Queries : 4573 / 5292
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 3549 / 5318
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 16 / 331
+INFO:root:True Label : 707 | Predicted Label : 853 | Cache Hits / Total Queries : 4647 / 5100
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 7737 / 9033
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 7123 / 7917
+INFO:root:True Label : 35 | Predicted Label : 477 | Cache Hits / Total Queries : 5333 / 5734
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 5081 / 5743
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 4738 / 6264
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 3527 / 3993
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 6446 / 6781
+INFO:root:True Label : 67 | Predicted Label : 980 | Cache Hits / Total Queries : 7316 / 9275
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 5536 / 6880
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 5950 / 6553
+INFO:root:True Label : 685 | Predicted Label : 934 | Cache Hits / Total Queries : 3162 / 5307
+INFO:root:True Label : 403 | Predicted Label : 437 | Cache Hits / Total Queries : 7 / 320
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 4605 / 5496
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 4388 / 4646
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 2823 / 3136
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 6769 / 7573
+INFO:root:True Label : 2 | Predicted Label : 235 | Cache Hits / Total Queries : 6609 / 8859
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 3832 / 4125
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 6246 / 6572
+INFO:root:True Label : 814 | Predicted Label : 117 | Cache Hits / Total Queries : 4061 / 5597
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 4733 / 5189
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 6784 / 7903
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 29 / 343
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 2595 / 2937
+INFO:root:True Label : 513 | Predicted Label : 649 | Cache Hits / Total Queries : 4696 / 5407
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 2867 / 5349
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 6225 / 6841
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 1915 / 5429
+INFO:root:True Label : 768 | Predicted Label : 444 | Cache Hits / Total Queries : 5808 / 6961
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 2750 / 5513
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 7625 / 8663
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 5233 / 5624
+INFO:root:True Label : 74 | Predicted Label : 399 | Cache Hits / Total Queries : 6439 / 7012
+INFO:root:True Label : 114 | Predicted Label : 550 | Cache Hits / Total Queries : 2825 / 3139
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 2213 / 5404
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 853 / 5176
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 4634 / 5100
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 5374 / 5780
+INFO:root:True Label : 320 | Predicted Label : 479 | Cache Hits / Total Queries : 6272 / 6619
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 2889 / 3203
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 7292 / 8050
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 4777 / 5489
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 139 / 1984
+INFO:root:True Label : 169 | Predicted Label : 184 | Cache Hits / Total Queries : 8243 / 11106
+INFO:root:True Label : 742 | Predicted Label : 745 | Cache Hits / Total Queries : 37 / 350
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 7240 / 8286
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 96 / 1130
+INFO:root:True Label : 901 | Predicted Label : 471 | Cache Hits / Total Queries : 642 / 1969
+INFO:root:True Label : 200 | Predicted Label : 621 | Cache Hits / Total Queries : 665 / 1698
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 8061 / 9321
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 5845 / 6174
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 2915 / 3231
+INFO:root:True Label : 779 | Predicted Label : 895 | Cache Hits / Total Queries : 6048 / 7419
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 6448 / 7329
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 7266 / 8597
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 4485 / 5348
+INFO:root:True Label : 754 | Predicted Label : 507 | Cache Hits / Total Queries : 6591 / 7631
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 5615 / 6028
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 4054 / 5201
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 6167 / 6564
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 3326 / 3638
+INFO:root:True Label : 999 | Predicted Label : 180 | Cache Hits / Total Queries : 7412 / 9017
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 3243 / 6438
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 3367 / 5200
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 4708 / 5381
+INFO:root:True Label : 651 | Predicted Label : 500 | Cache Hits / Total Queries : 6120 / 6730
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 6539 / 6912
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 6278 / 6604
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 5974 / 6657
+INFO:root:True Label : 611 | Predicted Label : 651 | Cache Hits / Total Queries : 7749 / 8276
+INFO:root:True Label : 514 | Predicted Label : 943 | Cache Hits / Total Queries : 626 / 1241
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 7579 / 8072
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 7562 / 8275
+INFO:root:True Label : 655 | Predicted Label : 57 | Cache Hits / Total Queries : 5108 / 6927
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 9027 / 10911
+INFO:root:True Label : 851 | Predicted Label : 47 | Cache Hits / Total Queries : 4142 / 5282
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 5960 / 7691
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 2851 / 3169
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 4760 / 5742
+INFO:root:True Label : 52 | Predicted Label : 981 | Cache Hits / Total Queries : 5969 / 6902
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 4449 / 5093
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 7443 / 7928
+INFO:root:True Label : 447 | Predicted Label : 863 | Cache Hits / Total Queries : 2156 / 5695
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 289 / 5411
+INFO:root:FINISHED
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 957 / 6069
+INFO:root:FINISHED
+INFO:root:True Label : 694 | Predicted Label : 916 | Cache Hits / Total Queries : 6057 / 6472
+INFO:root:True Label : 196 | Predicted Label : 545 | Cache Hits / Total Queries : 4026 / 5548
+INFO:root:True Label : 547 | Predicted Label : 717 | Cache Hits / Total Queries : 4181 / 4640
+INFO:root:True Label : 75 | Predicted Label : 849 | Cache Hits / Total Queries : 4717 / 5185
+INFO:root:True Label : 571 | Predicted Label : 721 | Cache Hits / Total Queries : 8254 / 8723
+INFO:root:True Label : 255 | Predicted Label : 403 | Cache Hits / Total Queries : 2308 / 5507
+INFO:root:True Label : 579 | Predicted Label : 494 | Cache Hits / Total Queries : 4155 / 4811
+INFO:root:True Label : 244 | Predicted Label : 616 | Cache Hits / Total Queries : 7926 / 8964
+INFO:root:True Label : 858 | Predicted Label : 154 | Cache Hits / Total Queries : 2787 / 5262
+INFO:root:FINISHED

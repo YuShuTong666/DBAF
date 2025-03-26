@@ -1,0 +1,8 @@
+"""
+Module providing membership inference attacks.
+"""
+from attacks.art.attacks.inference.membership_inference.black_box import MembershipInferenceBlackBox
+from attacks.art.attacks.inference.membership_inference.black_box_rule_based import MembershipInferenceBlackBoxRuleBased
+from attacks.art.attacks.inference.membership_inference.label_only_gap_attack import LabelOnlyGapAttack
+from attacks.art.attacks.inference.membership_inference.label_only_boundary_distance import LabelOnlyDecisionBoundary
+from attacks.art.attacks.inference.membership_inference.shadow_models import ShadowModels
