@@ -1,7 +1,7 @@
-# 	[ACM CCS 2023] Stateful Defenses for Machine Learning Models Are Not Yet Secure Against Black-box Attacks
+<!-- # 	[ACM CCS 2023] Stateful Defenses for Machine Learning Models Are Not Yet Secure Against Black-box Attacks
 
 This is an implemenation of the OARS attack framework described in the ACM CCS 2023 paper:
-[Stateful Defenses for Machine Learning Models Are Not Yet Secure Against Black-box Attacks](https://arxiv.org/abs/2303.06280).
+[Stateful Defenses for Machine Learning Models Are Not Yet Secure Against Black-box Attacks](https://arxiv.org/abs/2303.06280). -->
 
 ## 1. Environment
 
@@ -16,9 +16,9 @@ Set up your environment using the conda environment file `environment.yml` as fo
 
 ```conda env create -f environment.yml```
 
-After you're all set up, go ahead and activate the `oars` environment to run things:
+After you're all set up, go ahead and activate the `dbaf` environment to run things:
 
-```conda activate oars```
+```conda activate dbaf```
 
 ## 2. Code
 
@@ -126,7 +126,7 @@ This code is licensed under the MIT license:
 > SOFTWARE.
 
 
-If you use this code in your research, please cite the following paper:
+<!-- If you use this code in your research, please cite the following paper:
 
 ```
 @article{feng2023investigating,
@@ -134,4 +134,4 @@ If you use this code in your research, please cite the following paper:
   author={Feng (co-lead), Ryan and Hooda (co-lead), Ashish and Mangaokar (co-lead), Neal and Fawaz, Kassem and Jha, Somesh and Prakash, Atul},
   journal={Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
   year={2023}
-}
+} -->

@@ -60,13 +60,9 @@ args_dba = parser.parse_args()
 
 def imagenet_target_attack(args, N_img, model_config):
     import torchvision.models as models
-    #model = models.resnet18(pretrained=True).eval()  # for CPU, remove cuda()
     if args.model == 'resnet':
         model = models.resnet50(pretrained=True).eval()
         print("Attacked model: resnet50")
-        #model = torchvision.models.resnet152().eval()
-        #model.load_state_dict(torch.load('res152-adv-pytorch.model'))
-        #print("Attacked model: resnet152_adversarial_training")
     elif args.model == 'vgg':
         model = models.vgg16(pretrained=True).eval()
         print("Attacked model: vgg16")
@@ -92,12 +88,7 @@ def imagenet_target_attack(args, N_img, model_config):
     model.cuda()
     model = init_stateful_classifier_v2(model_config, model, args)
     preprocessing = dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225], axis=-3)
-    #fmodel = box.models.PyTorchModel(model, bounds=(0, 1), preprocessing=preprocessing)
-    root = '/data/huangxingshuo/imagenet/val'
-    if not os.path.exists(root):
-        root = '/home/huangxingshuo/imagenet/val'
-    #normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                     #std=[0.229, 0.224, 0.225])
+    root = 'path/to/imagenet val'
     transform = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
@@ -110,7 +101,6 @@ def imagenet_target_attack(args, N_img, model_config):
     )
     src_images, src_labels = None, None
     tgt_images, tgt_labels = None, None
-    #while (len(src_images) < N_img):
     for _, (x, y) in enumerate(loader):
         x = x.cuda()
         y = y.cuda()
@@ -133,9 +123,7 @@ def imagenet_target_attack(args, N_img, model_config):
             continue
         if src_images.shape[0] == N_img:
             break
-    file_path = '/data/huangxingshuo/output'
-    if not os.path.exists(file_path):
-        file_path = '/home/huangxingshuo/output'
+    file_path = 'output'
     torchvision.utils.save_image(src_images[19], file_path + '/src19.jpg')
     torchvision.utils.save_image(tgt_images[19], file_path + '/tgt19.jpg')
     torchvision.utils.save_image(src_images[20], file_path + '/src20.jpg')

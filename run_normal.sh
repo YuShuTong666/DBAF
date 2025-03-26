@@ -32,7 +32,7 @@ Surfree:
     DPF:
     CUDA_VISIBLE_DEVICES=2 python main.py --config configs/imagenet/blacklight/surfree/targeted/fooler/normalconfig.json
 
-conda activate oars
+conda activate dbaf
 cd ccs-23-oras
 CUDA_VISIBLE_DEVICES=3 python main_imagenet.py --celeba --eps 0.05
 CUDA_VISIBLE_DEVICES=1 python main_imagenet.py --eps

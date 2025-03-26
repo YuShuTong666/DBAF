@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--log_path', type=str, default='/data/huangxingshuo/ccs-23-oras/configs/imagenet/blacklight/hsja/targeted/adaptive/logs/config')
+    parser.add_argument('--log_path', type=str, default='configs/imagenet/blacklight/hsja/targeted/adaptive/logs/config')
 
     args = parser.parse_args()
     logs = sorted([x for x in os.listdir(args.log_path) if 'log' in x])

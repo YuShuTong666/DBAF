@@ -70,18 +70,13 @@ def normal_eval(model, dataloader):
         B = X.size()[0]
         with torch.no_grad():
             pred = model(X)
-            #loss = model.loss(pred, y)
-
-        #cum_loss += loss.item() * B
         pred_c = pred.max(1)[1].cpu()
         cum_acc += (pred_c.eq(y.cpu())).sum().item()
         tot_num = tot_num + B
-        #cache_num += np.count_nonzero(is_cache)
         tqdm.write("Accuracy: ", end="")
         tqdm.write(str(cum_acc / tot_num))
 
     print(cum_acc / tot_num)
-    # 0.74548
     return cum_acc / tot_num
 
 
@@ -97,9 +92,6 @@ def epoch_eval(model, dataloader):
         B = X.size()[0]
         with torch.no_grad():
             pred, is_cache = model.forward_batch(X)
-            #loss = model.loss(pred, y)
-
-        #cum_loss += loss.item() * B
         pred_c = pred.max(1)[1].cpu()
         cum_acc += (pred_c.eq(y.cpu())).sum().item()
         tot_num = tot_num + B
@@ -110,30 +102,16 @@ def epoch_eval(model, dataloader):
         tqdm.write(str(cache_num / tot_num))
 
     print(cum_acc / tot_num)
-    # 0.7455  0.00312  self.eps=0.2
-
-    # 在3090-3上测试eps=0.05的防御效果
-    # ImageNet resnet：
-    # DPF: 0.00294  eps=0.1
-    #    : 0.00122  eps=0.05
-    # blacklight: 0.7455 0.00242
-    # PIHA 0.00074
-    # ImageNet vit：
-
-    # Celeba resnet:
-    # DPF : 0.0  eps=0.05 or 0.1
-    # blacklight: 0.000413
     return cum_acc / tot_num
 
 
 config = json.load(open(args.config))
 model_config, attack_config = config["model_config"], config["attack_config"]
-#model = models.resnet50(pretrained=True).eval()
 if args.celeba:
     from main import CelebAModel
-    model_root = '/data/huangxingshuo/models/'
+    model_root = 'path/to/your model'
     if not os.path.exists(model_root):
-        model_root = '/home/huangxingshuo/models/'
+        exit(0)
     model = CelebAModel(100, model=args.model, pretrained=False, gpu=True)
     if args.model == 'resnet':
         stat = torch.load(model_root + "resnetceleba.model")
@@ -150,15 +128,12 @@ if args.celeba:
     if not args.normal:
         model = init_stateful_classifier_v2(model_config, model, args)
     root = '../celeba/celeba'
-    #if not os.path.exists(root):
-    #root = '/home/huangxingshuo/imagenet/val'
     transform = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor()])
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
     np.random.seed(args.seed)
     from celeba_dataset import CelebADataset
     testset = CelebADataset(root_dir=root, is_train=True, transform=transform, preprocess=False, random_sample=False, n_id=100)
-    #dataset = datasets.ImageFolder(root=root, transform=transform)
     loader = Data.DataLoader(
         dataset=testset,
         batch_size=64,
@@ -168,9 +143,6 @@ else:
     if args.model == 'resnet':
         model = models.resnet50(pretrained=True).eval()
         print("Attacked model: resnet50")
-        # model = torchvision.models.resnet152().eval()
-        # model.load_state_dict(torch.load('res152-adv-pytorch.model'))
-        # print("Attacked model: resnet152_adversarial_training")
     elif args.model == 'vgg':
         model = models.vgg16(pretrained=True).eval()
         print("Attacked model: vgg16")
@@ -179,9 +151,7 @@ else:
     model.cuda()
     if not args.normal:
         model = init_stateful_classifier_v2(model_config, model, args)
-    root = '/data/huangxingshuo/imagenet/val'
-    if not os.path.exists(root):
-        root = '/home/huangxingshuo/imagenet/val'
+    root = 'path/to/imagenet val'
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     if args.normal:
         transform = transforms.Compose([transforms.Resize((224, 224)), transforms.ToTensor(), normalize])

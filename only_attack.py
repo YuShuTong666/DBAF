@@ -96,28 +96,14 @@ parser.add_argument("--untargeted", action="store_true")
 parser.add_argument("--normal", action="store_true")
 args_dba = parser.parse_args()
 
-# if args_dba.config is None:
-#     config_path = 'configs/{}/{}/{}'.format(args_dba.data, args_dba.defense, args_dba.attack)
-#     untargeted = '/untargeted' if args_dba.untargeted else '/targeted'
-#     normal = '/standard' if args_dba.normal else '/adaptive'
-#     config_names = ['/normalconfig.json', '/config.json']
-#     for name in config_names:
-#         if os.path.exists(config_path + untargeted + normal + name):
-#             args_dba.config = config_path + untargeted + normal + name
-#         elif os.path.exists(config_path + normal + name):
-#             args_dba.config = config_path + normal + name
 
 
 def imagenet_target_attack(args, N_img, model_config):
     import torchvision.models as models
 
-    # model = models.resnet18(pretrained=True).eval()  # for CPU, remove cuda()
     if args.model == "resnet":
         model = models.resnet50(pretrained=True).eval()
         print("Attacked model: resnet50")
-        # model = torchvision.models.resnet152().eval()
-        # model.load_state_dict(torch.load('res152-adv-pytorch.model'))
-        # print("Attacked model: resnet152_adversarial_training")
     elif args.model == "vgg":
         model = models.vgg16(pretrained=True).eval()
         print("Attacked model: vgg16")
@@ -139,20 +125,10 @@ def imagenet_target_attack(args, N_img, model_config):
         model = BitDepthModel(pretrained=True).eval()
     else:
         raise Exception("Invalid model name!")
-    # if args.use_gpu:
     model.cuda()
-    # model = init_stateful_classifier_v2(model_config, model, args)
     preprocessing = dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225], axis=-3)
-    # fmodel = box.models.PyTorchModel(model, bounds=(0, 1), preprocessing=preprocessing)
+    root = 'path/to/imagenet val'
 
-    # root = '/data/huangxingshuo/imagenet/val'
-    # if not os.path.exists(root):
-    #     root = '/home/huangxingshuo/imagenet/val'
-    # root = '/data/yushutong/datasets/imagenet/val' #58
-    root = "/home/yushutong/imagenet/val"  # 215
-
-    # normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-    # std=[0.229, 0.224, 0.225])
     transform = transforms.Compose(
         [transforms.Resize((224, 224)), transforms.ToTensor()]
     )
@@ -249,9 +225,7 @@ class CelebAModel(nn.Module):
 
 
 def celeba_target_attack(args, N_img, model_config):
-    model_root = "/data/huangxingshuo/models/"
-    if not os.path.exists(model_root):
-        model_root = "/home/huangxingshuo/models/"
+    model_root = 'path/to/your model'
     model = CelebAModel(100, model=args.model, pretrained=False, gpu=True)
     if args.model == "resnet":
         stat = torch.load(model_root + "resnetceleba.model")
@@ -262,17 +236,9 @@ def celeba_target_attack(args, N_img, model_config):
         model.load_state_dict(stat)
     else:
         raise Exception("Invalid model name!")
-    # if args.use_gpu:
     model.eval()
     model.cuda()
-    # model = init_stateful_classifier_v2(model_config, model, args)
-    # preprocessing = dict(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225], axis=-3)
-    # fmodel = box.models.PyTorchModel(model, bounds=(0, 1), preprocessing=preprocessing)
-    root = "/data/huangxingshuo/celeba/celeba"
-    if not os.path.exists(root):
-        root = "/home/huangxingshuo/celeba/celeba"
-    # normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-    # std=[0.229, 0.224, 0.225])
+    root = 'path/to/celeba'
     transform = transforms.Compose(
         [transforms.Resize((224, 224)), transforms.ToTensor()]
     )
@@ -281,7 +247,6 @@ def celeba_target_attack(args, N_img, model_config):
     np.random.seed(args.seed)
     from celeba_dataset import CelebADataset
 
-    # dataset = datasets.ImageFolder(root=root, transform=transform)
     testset = CelebADataset(
         root_dir=root,
         is_train=False,
@@ -297,7 +262,6 @@ def celeba_target_attack(args, N_img, model_config):
     )
     src_images, src_labels = None, None
     tgt_images, tgt_labels = None, None
-    # while (len(src_images) < N_img):
     for _, (x, y) in enumerate(loader):
         x = x.cuda()
         y = y.cuda()
