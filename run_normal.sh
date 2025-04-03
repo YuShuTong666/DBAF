@@ -1,4 +1,4 @@
-ImageNet 非自适应攻击
+ImageNet normal attack
 HSJA:
     PIHA:
     CUDA_VISIBLE_DEVICES=3 python main.py --config configs/imagenet/piha/hsja/targeted/standard/config.json
@@ -33,11 +33,10 @@ Surfree:
     CUDA_VISIBLE_DEVICES=2 python main.py --config configs/imagenet/blacklight/surfree/targeted/fooler/normalconfig.json
 
 conda activate dbaf
-cd ccs-23-oras
 CUDA_VISIBLE_DEVICES=3 python main_imagenet.py --celeba --eps 0.05
 CUDA_VISIBLE_DEVICES=1 python main_imagenet.py --eps
 
-ImageNet 自适应攻击
+ImageNet adaptative attack
 HSJA:
     PIHA:
     CUDA_VISIBLE_DEVICES=3 python main.py --config configs/imagenet/piha/hsja/targeted/adaptive/config.json
@@ -54,7 +53,6 @@ QEBA:
     DPF:
     CUDA_VISIBLE_DEVICES=3 python main.py --config configs/imagenet/blacklight/hsja/targeted/fooler/config.json --method QEBA
 
-# 3090 - 7： celeba上的前6个的resnet
 
 DBA-GP:
     PIHA:

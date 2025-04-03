@@ -54,48 +54,12 @@ loader routine that loads the attacks and runs them over a dataset. Indeed, it i
 `main.py`. 
 
 #### 2.2.4. Data
-You're going to want to edit `utils/datasets.py` to point to your dataset folder. To organize your data, structure your dataset folder as follows (using cifar10 as an example):
-
-```
-cifar10/
-    - imgs/ 
-        - 0.png
-        - 1.png
-        - 2.png
-        ...
-    - cifar10.json 
-    - cifar10_targeted.json 
-```
-where `cifar10.json` is a json file that maps images to their labels, e.g., 
-
-```
-{
-    "imgs/0.png": 3,
-    "imgs/1.png": 8,
-    "imgs/2.png": 8,
-    ...
-}
-```
-and where `cifar10_targeted.json` is a json file for targeted attacks, that maps target labels to an initialization image for that label, e.g.,
-
-```
-{
-  "3": [
-    "imgs/0.png"
-  ],
-  "8": [
-    "imgs/1.png"
-  ],
-  ...
-}
-```
+You're going to want to edit `main.py` to point to your dataset folder.
 
 #### 2.2.5. Configs and Results
 Configuration files in subdirectories of `configs` are just `.json` files that specify the parameters for an experiment. A config file specifies all the information
 for the dataset, model, attack parameters, etc. When you run an experiment the results should be saved in the directory
-that contains the config file that you used (unless you used `--disable_logging`). You can compute metrics on the results folder using `analysis.py` as follows:
-
-`python analysis.py --log_path [path to results directory]`
+that contains the config file that you used (unless you used `--disable_logging`). See example commands in `run_normal.sh`.
 
 
 # 3. Responsible Use, License, and Citation
